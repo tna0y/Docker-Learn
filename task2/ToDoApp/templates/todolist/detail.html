@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task</title>
+</head>
+<body>
+<button onclick="window.history.back();">Back</button>
+<p>{{ task }}
+{% if completed %}
+    <p>Status: <b>Completed</b></p>
+    <form method="GET" action=""><input type="hidden" name="switch"><input type="submit" value="Mark as not complete"></form>
+{% else %}
+    <p>Status: <b>In progress</b></p>
+    <form method="GET" action=""><input type="hidden" name="switch"><input type="submit" value="Mark as complete"></form>
+{% endif %}
+<form method="GET" action=""><input type="hidden" name="delete"><input type="submit" value="Delete" color="red"></form>
+
+</body>
+</html>

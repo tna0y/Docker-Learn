@@ -1,0 +1,7 @@
+version: '3'
+services:
+    todoapp:
+        restart: always
+        build: ./ToDoApp
+        ports:
+            - "8000:8000"
